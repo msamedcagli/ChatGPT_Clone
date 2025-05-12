@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <!-- Yapay zeka mesajı -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_takon_boot"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:id="@+id/aiMessageContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ai_message_background"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:maxWidth="260dp" />
+    </LinearLayout>
+
+</LinearLayout>
