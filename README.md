@@ -2,7 +2,7 @@
 <p>Bu projede ChatGPT uygulamasının mobil uygulaması tasarlanmıştır.</p>
 
 ## Uygulama Görselleri
-|             Giriş Ekranı             |               ChatGPT Ekranı              |              ChatGPT Ekranı              |
+|             Giriş Ekranı             |                Metin Yükleme              |              Resim Yükleme               |
 | :----------------------------------: | :---------------------------------------: |:---------------------------------------: |
 |    ![](app_image/anaekran.png)       |       ![](app_image/chatekrani.png)       |      ![](app_image/resimyukleme.png)     |
 
