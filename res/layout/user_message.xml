@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:gravity="end"
     android:padding="8dp">
 
@@ -15,4 +15,13 @@
         android:textSize="16sp"
         android:padding="12dp"
         android:maxWidth="260dp" />
+
+    <ImageView
+        android:id="@+id/messageImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:background="@drawable/user_message_background" />
 </LinearLayout>
