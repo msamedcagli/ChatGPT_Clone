@@ -2,9 +2,9 @@
 <p>Bu projede ChatGPT uygulamasının mobil uygulaması tasarlanmıştır.</p>
 
 ## Uygulama Görselleri
-|             Giriş Ekranı             |               ChatGPT Ekranı              |
-| :----------------------------------: | :---------------------------------------: |
-|    ![](app_image/anaekran.png)       |       ![](app_image/chatekrani.png)       |
+|             Giriş Ekranı             |               ChatGPT Ekranı              |              ChatGPT Ekranı              |
+| :----------------------------------: | :---------------------------------------: |:---------------------------------------: |
+|    ![](app_image/anaekran.png)       |       ![](app_image/chatekrani.png)       |      ![](app_image/resimyukleme.png)     |
 
 <br>
 <h2>Uygulamanın Özellikleri (12.05.2025)</h2>
@@ -16,7 +16,7 @@
 <br>
 <h2>Geliştirilecek Özellikler</h2>
 <ul>
-  <li>Resim Yükleme</li>
+  <li>Resim Yükleme(Eklendi 13.05.2025)</li>
   <li>Sesli Soru Sorma</li>
   <li>Profil Sayfası</li>
   <li>Geçmiş Sphbetler</li>
