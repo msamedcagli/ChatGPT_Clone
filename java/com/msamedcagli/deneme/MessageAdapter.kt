@@ -3,6 +3,7 @@ package com.msamedcagli.deneme
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -31,6 +32,12 @@ class MessageAdapter(private val messageList: List<Message>) : RecyclerView.Adap
         val message = messageList[position]
         if (holder is UserViewHolder) {
             holder.userMessage.text = message.content
+            if (message.imageUri != null) {
+                holder.userImage.visibility = View.VISIBLE
+                holder.userImage.setImageURI(message.imageUri)
+            } else {
+                holder.userImage.visibility = View.GONE
+            }
         } else if (holder is AiViewHolder) {
             holder.aiMessage.text = message.content
         }
@@ -40,6 +47,7 @@ class MessageAdapter(private val messageList: List<Message>) : RecyclerView.Adap
 
     class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val userMessage: TextView = view.findViewById(R.id.messageContent)
+        val userImage: ImageView = view.findViewById(R.id.messageImage)
     }
 
     class AiViewHolder(view: View) : RecyclerView.ViewHolder(view) {
