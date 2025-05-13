@@ -1,64 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral80"
     android:orientation="vertical"
-    android:background="#F9F9F9"
     tools:context=".MainActivity">
 
     <!-- Üst başlık -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="#FFFFFF"
-        android:orientation="horizontal"
+        android:background="@color/material_dynamic_neutral80"
+        android:elevation="4dp"
         android:gravity="center_vertical"
-        android:padding="10dp"
-        android:elevation="4dp">
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageButton
             android:id="@+id/btnBack"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="10dp"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:contentDescription="Geri"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
+            android:contentDescription="Geri"
             app:srcCompat="@drawable/back" />
 
         <ImageView
-            android:layout_marginTop="8dp"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/ic_takon_boot"
-            android:layout_marginStart="12dp" />
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/gpt" />
 
         <LinearLayout
-            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="8dp">
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ChatGPT"
-                android:textColor="#1E88E5"
+                android:textColor="@color/material_dynamic_neutral20"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="• Online"
-                android:textColor="#4CAF50"
-                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -68,8 +60,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="12dp"
+        android:background="@color/material_dynamic_neutral80"
         android:clipToPadding="false"
+        android:padding="12dp"
         android:scrollbars="vertical" />
 
     <!-- Mesaj yazma alanı -->
@@ -78,11 +71,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="23dp"
-        android:orientation="horizontal"
         android:background="@drawable/input_background"
-        android:padding="12dp"
+        android:elevation="4dp"
         android:gravity="center_vertical"
-        android:elevation="4dp">
+        android:orientation="horizontal"
+        android:padding="12dp">
 
 
         <EditText
@@ -90,18 +83,28 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Write your message"
             android:background="@android:color/transparent"
-            android:textSize="16sp"
+            android:hint="Write your message"
+            android:inputType="textMultiLine|textCapSentences"
             android:padding="8dp"
-            android:inputType="textMultiLine|textCapSentences" />
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/GorselButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Gönder"
+            android:src="@drawable/upload" />
 
         <ImageButton
             android:id="@+id/GonderButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/send"
+            android:layout_marginLeft="10dp"
             android:background="@android:color/transparent"
-            android:contentDescription="Gönder" />
+            android:contentDescription="Gönder"
+            android:src="@drawable/submit" />
     </LinearLayout>
 </LinearLayout>
