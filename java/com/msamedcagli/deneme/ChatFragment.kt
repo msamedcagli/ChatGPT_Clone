@@ -56,7 +56,7 @@ class ChatFragment : Fragment() {
             val imageBytes = byteArrayOutputStream.toByteArray()
             val base64Image = Base64.encodeToString(imageBytes, Base64.NO_WRAP)
 
-            val apiKey = "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"
+            val apiKey = "" //Api key yazılacak
             val url = "https://api.openai.com/v1/chat/completions"
 
             val json = """
@@ -203,12 +203,12 @@ class ChatFragment : Fragment() {
     }
 
     private fun getResponse(question: String, callback: (String) -> Unit) {
-        val apiKey = "" //api key gelecek
-        val url = "https://openrouter.ai/api/v1/chat/completions"
+        val apiKey = "" //Api key yazılacak
+        val url = "https://api.openai.com/v1/chat/completions"
 
         val json = """
         {
-            "model": "openai/gpt-3.5-turbo",
+            "model": "gpt-4o-2024-05-13",
             "messages": [
                 {"role": "user", "content": "$question"}
             ],
