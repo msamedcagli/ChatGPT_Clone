@@ -1,5 +1,11 @@
 <h1 >ChatGPT Mobil Uygulaması</h1>
 <p>Bu projede ChatGPT uygulamasının mobil uygulaması tasarlanmıştır.</p>
+
+## Uygulama Görselleri
+|             Giriş Ekranı             |               ChatGPT Ekranı              |
+| :----------------------------------: | :---------------------------------------: |
+|    ![](app_image/anaekran.png)       |       ![](app_image/chatekrani.png)       |
+
 <br>
 <h2>Uygulamanın Özellikleri (12.05.2025)</h2>
 <ul>
@@ -15,3 +21,5 @@
   <li>Profil Sayfası</li>
   <li>Geçmiş Sphbetler</li>
 </ul>
+
+
