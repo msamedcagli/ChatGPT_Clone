@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_takon_boot"
+            android:src="@drawable/gpt"
             android:layout_marginEnd="6dp" />
 
         <TextView
