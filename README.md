@@ -26,9 +26,9 @@
   <li>Resim Yükleme (Eklendi 13.05.2025)</li>
   <li>Sesli Soru Sorma</li>
   <li>Hesap Oluşturma</li>
-  <li>Kullanıcı Girişi Sayfası</li>
+  <li>Kullanıcı Girişi Sayfası (Eklendi 12.05.2025)</li>
   <li>Profil Sayfası</li>
-  <li>Geçmiş Sphbetler</li>
+  <li>Geçmiş Sohbetler</li>
 </ul>
 
 
