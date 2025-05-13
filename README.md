@@ -11,6 +11,7 @@
 <ul>
   <li>Resim Yükleme ve İşleme Eklendi</li>
   <li>Open AI apisine geçiş yapıldı</li>
+  <li>ÜCRETLİ APİ KEY OLMADIĞI İÇİN RESİM YÜKLEME ÖZELLİĞİNDE HATA VERİYOR</li>
 </ul>
 <br>
 <h2>Uygulamanın Özellikleri (12.05.2025)</h2>
