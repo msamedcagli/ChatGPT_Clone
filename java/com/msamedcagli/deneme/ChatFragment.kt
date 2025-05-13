@@ -74,15 +74,17 @@ class ChatFragment : Fragment() {
     }
 
     private fun getResponse(question: String, callback: (String) -> Unit) {
-        val apiKey = "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"
+        val apiKey = "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"
         val url = "https://openrouter.ai/api/v1/chat/completions"
 
         val json = """
         {
-            "model": "gpt-3.5-turbo",  
+            "model": "openai/gpt-3.5-turbo",
             "messages": [
                 {"role": "user", "content": "$question"}
-            ]
+            ],
+            "temperature": 0.7,
+            "max_tokens": 1000
         }
     """.trimIndent()
 
@@ -90,11 +92,14 @@ class ChatFragment : Fragment() {
 
         val request = Request.Builder()
             .url(url)
-            .header("Authorization", "Bearer $apiKey")
-            .header("Content-Type", "application/json")
-            .header("HTTP-Referer", "https://example.com")
+            .addHeader("Authorization", "Bearer $apiKey")
+            .addHeader("Content-Type", "application/json")
+            .addHeader("HTTP-Referer", "https://example.com")
+            .addHeader("X-Title", "Deneme App")
             .post(requestBody)
             .build()
+
+        println("API İsteği: $json") // Debug için isteği yazdır
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -105,7 +110,17 @@ class ChatFragment : Fragment() {
                 val body = response.body?.string()
                 if (body != null) {
                     try {
+                        println("API Yanıtı: $body") // Debug için yanıtı yazdır
+                        println("Response Code: ${response.code}") // Response kodunu yazdır
+                        
                         val jsonResponse = JSONObject(body)
+                        
+                        if (jsonResponse.has("error")) {
+                            val error = jsonResponse.getJSONObject("error")
+                            callback("API Hatası: ${error.getString("message")}")
+                            return
+                        }
+                        
                         val responseMessage = jsonResponse
                             .getJSONArray("choices")
                             .getJSONObject(0)
@@ -114,7 +129,7 @@ class ChatFragment : Fragment() {
 
                         callback(responseMessage)
                     } catch (e: Exception) {
-                        callback("Cevap işlenemedi: ${e.message}")
+                        callback("Cevap işlenemedi: ${e.message}\nYanıt: $body")
                     }
                 } else {
                     callback("Boş cevap alındı")
